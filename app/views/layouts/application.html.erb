@@ -52,13 +52,13 @@
             <%= link_to new_post_path do %>
               <button class="button">New Post</button>
             <% end %>
-            <button class="button">Log Out</button>
+            <%= link_to("Log Out", destroy_user_session_path, class: "button", method: :delete) %>
           </div>
         <% end %>
         </div>
 
       <% flash.each do |name, msg| %>
-        <%= content_tag(:div, msg, class: "alert") %>
+        <%= content_tag(:div, msg, class: alert) %>
       <% end %>
 
 
